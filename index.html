@@ -2426,7 +2426,7 @@
                 const formData = new FormData(form);
                 const data = Object.fromEntries(formData);
                 console.log('Form submitted:', data);
-                window.location.href = 'page2-confirmation-v2.html?name=' + encodeURIComponent(data.firstname);
+                window.location.href = 'confirmation.html?name=' + encodeURIComponent(data.firstname);
             });
         });
 
