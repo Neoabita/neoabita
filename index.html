@@ -779,58 +779,122 @@
         /* Hero Image */
         .hero-visual {
             position: relative;
-            display: none;
-            grid-column: 1 / -1;
-            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        
+        @media (min-width: 480px) {
+            .hero-visual {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                margin-top: 40px;
+            }
         }
         
         @media (min-width: 1200px) {
             .hero-visual {
-                display: grid;
+                grid-column: 1 / -1;
                 grid-template-columns: 2fr 1fr;
-                gap: 20px;
-                align-items: end;
             }
         }
         
         .hero-image-main {
             position: relative;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-700);
+            padding: 10px;
+        }
+        
+        @media (min-width: 480px) {
+            .hero-image-main {
+                padding: 12px;
+            }
         }
         
         .hero-image-main img {
             width: 100%;
-            height: 400px;
+            height: 180px;
             object-fit: cover;
             filter: brightness(0.9);
         }
         
-        .hero-image-main::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, transparent 30%, transparent 70%, rgba(10,10,10,0.5) 100%);
+        @media (min-width: 480px) {
+            .hero-image-main img {
+                height: 250px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .hero-image-main img {
+                height: 350px;
+            }
+        }
+        
+        .hero-image-main .caption {
+            padding: 10px 0 0;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            text-align: center;
+        }
+        
+        @media (min-width: 480px) {
+            .hero-image-main .caption {
+                padding: 12px 0 0;
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+            }
         }
         
         .hero-image-3d {
             background: var(--gray-900);
             border: 1px solid var(--gray-700);
-            padding: 12px;
+            padding: 10px;
             box-shadow: var(--shadow-lg);
+        }
+        
+        @media (min-width: 480px) {
+            .hero-image-3d {
+                padding: 12px;
+            }
         }
         
         .hero-image-3d img {
             width: 100%;
-            height: 200px;
+            height: 150px;
             object-fit: cover;
         }
         
+        @media (min-width: 480px) {
+            .hero-image-3d img {
+                height: 200px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .hero-image-3d img {
+                height: 200px;
+            }
+        }
+        
         .hero-image-3d .caption {
-            padding: 12px 0 0;
-            font-size: 0.65rem;
+            padding: 10px 0 0;
+            font-size: 0.6rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: var(--gold);
             text-align: center;
+        }
+        
+        @media (min-width: 480px) {
+            .hero-image-3d .caption {
+                padding: 12px 0 0;
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+            }
         }
         
         /* CTA Inline Section */
@@ -1783,63 +1847,9 @@
             }
         }
         
-        /* Mobile CTA */
+        /* Mobile CTA - Désactivé */
         .mobile-cta {
-            display: block;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--gray-900);
-            padding: 12px 16px;
-            border-top: 1px solid var(--gray-700);
-            z-index: 999;
-        }
-        
-        @media (min-width: 480px) {
-            .mobile-cta {
-                padding: 14px 20px;
-            }
-        }
-        
-        @media (min-width: 1200px) {
-            .mobile-cta {
-                display: none;
-            }
-        }
-        
-        .mobile-cta a {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background: var(--gold);
-            color: var(--black);
-            text-align: center;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        @media (min-width: 480px) {
-            .mobile-cta a {
-                padding: 14px;
-                font-size: 0.8rem;
-                letter-spacing: 1px;
-            }
-        }
-        
-        @media (max-width: 1199px) {
-            body {
-                padding-bottom: 60px;
-            }
-        }
-        
-        @media (min-width: 480px) and (max-width: 1199px) {
-            body {
-                padding-bottom: 70px;
-            }
+            display: none;
         }
     </style>
 </head>
@@ -1977,6 +1987,7 @@
                 <div class="hero-visual">
                     <div class="hero-image-main">
                         <img src="Neoabita-07-25-21.jpg" alt="Villa haut de gamme Neoabita">
+                        <div class="caption">Villa réalisée par Neoabita</div>
                     </div>
                     <div class="hero-image-3d">
                         <img src="villa-3d-realiste.png" alt="Plan 3D villa Neoabita">
