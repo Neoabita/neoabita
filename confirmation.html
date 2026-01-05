@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Confirmée | Webinaire Neoabita</title>
+    <meta name="description" content="Votre place pour le webinaire Neoabita est réservée. Ajoutez l'événement à votre calendrier.">
+    
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "uwshu0gfa2");
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #D4BC7B;
+            --gold-dark: #A68B4B;
+            --green: #4ADE80;
+            --green-dark: #22C55E;
+            --black: #0A0A0A;
+            --gray-900: #141414;
+            --gray-800: #1C1C1C;
+            --gray-700: #2A2A2A;
+            --gray-600: #3A3A3A;
+            --gray-500: #5A5A5A;
+            --gray-400: #8A8A8A;
+            --gray-300: #AAAAAA;
+            --gray-100: #E5E5E5;
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+            
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            
+            --shadow-gold: 0 0 60px rgba(201, 169, 98, 0.15);
+            --shadow-lg: 0 25px 80px rgba(0,0,0,0.5);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            color: var(--gray-100);
+            background: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        ::selection {
+            background: var(--gold);
+            color: var(--black);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        @media (min-width: 480px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        @media (min-width: 480px) {
+            .container-narrow {
+                padding: 0 24px;
+            }
+        }
+        
+        /* Grain Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 10000;
+        }
+        
+        /* Header */
+        header {
+            background: var(--gray-900);
+            border-bottom: 1px solid var(--gray-800);
+            padding: 20px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 36px;
+            width: auto;
+        }
+        
+        /* Success Hero */
+        .success-hero {
+            padding: 60px 0 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        @media (min-width: 480px) {
+            .success-hero {
+                padding: 80px 0 50px;
+            }
+        }
+        
+        .success-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(180deg, var(--gold), transparent);
+        }
+        
+        @media (min-width: 480px) {
+            .success-hero::before {
+                height: 50px;
+            }
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: transparent;
+            border: 2px solid var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            position: relative;
+            animation: scaleIn 0.5s ease;
+        }
+        
+        @media (min-width: 480px) {
+            .success-icon {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto 32px;
+            }
+        }
+        
+        .success-icon::before {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border: 1px solid rgba(74, 222, 128, 0.3);
+        }
+        
+        @media (min-width: 480px) {
+            .success-icon::before {
+                inset: -8px;
+            }
+        }
+        
+        .success-icon svg {
+            width: 36px;
+            height: 36px;
+            color: var(--green);
+        }
+        
+        @media (min-width: 480px) {
+            .success-icon svg {
+                width: 44px;
+                height: 44px;
+            }
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .success-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 12px;
+            animation: fadeInUp 0.6s ease 0.2s both;
+        }
+        
+        @media (min-width: 480px) {
+            .success-hero h1 {
+                margin-bottom: 14px;
+            }
+        }
+        
+        .success-hero h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+        
+        .success-hero > p {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            max-width: 500px;
+            margin: 0 auto;
+            animation: fadeInUp 0.6s ease 0.3s both;
+            line-height: 1.6;
+        }
+        
+        @media (min-width: 480px) {
+            .success-hero > p {
+                font-size: 1.05rem;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Event Card */
+        .event-card {
+            background: var(--gray-900);
+            border: 1px solid var(--gray-700);
+            margin-top: 40px;
+            animation: fadeInUp 0.6s ease 0.4s both;
+        }
+        
+        @media (min-width: 480px) {
+            .event-card {
+                margin-top: 50px;
+            }
+        }
+        
+        .event-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 20px;
+            border-bottom: 1px solid var(--gray-700);
+            flex-wrap: wrap;
+        }
+        
+        @media (min-width: 480px) {
+            .event-header {
+                align-items: center;
+                gap: 14px;
+                padding: 28px 36px;
+            }
+        }
+        
+        .event-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 5px 10px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 480px) {
+            .event-badge {
+                gap: 8px;
+                padding: 6px 14px;
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+            }
+        }
+        
+        .event-badge::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @media (min-width: 480px) {
+            .event-badge::before {
+                width: 6px;
+                height: 6px;
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .event-title {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--white);
+            line-height: 1.4;
+        }
+        
+        @media (min-width: 480px) {
+            .event-title {
+                font-size: 1.15rem;
+            }
+        }
+        
+        .event-body {
+            padding: 20px;
+        }
+        
+        @media (min-width: 480px) {
+            .event-body {
+                padding: 36px;
+            }
+        }
+        
+        .event-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        @media (min-width: 480px) {
+            .event-details {
+                gap: 20px;
+                margin-bottom: 36px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .event-details {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .event-detail {
+            text-align: center;
+            padding: 14px 10px;
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+        }
+        
+        @media (min-width: 480px) {
+            .event-detail {
+                padding: 20px;
+            }
+        }
+        
+        .event-detail-icon {
+            width: 30px;
+            height: 30px;
+            margin: 0 auto 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (min-width: 480px) {
+            .event-detail-icon {
+                width: 36px;
+                height: 36px;
+                margin: 0 auto 12px;
+            }
+        }
+        
+        .event-detail-icon svg {
+            width: 18px;
+            height: 18px;
+            color: var(--gold);
+        }
+        
+        @media (min-width: 480px) {
+            .event-detail-icon svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+        
+        .event-detail-label {
+            font-size: 0.55rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+        
+        @media (min-width: 480px) {
+            .event-detail-label {
+                font-size: 0.65rem;
+                letter-spacing: 1px;
+                margin-bottom: 4px;
+            }
+        }
+        
+        .event-detail-value {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+        
+        @media (min-width: 480px) {
+            .event-detail-value {
+                font-size: 0.95rem;
+            }
+        }
+        
+        /* Warning Box */
+        .warning-box {
+            background: rgba(201, 169, 98, 0.08);
+            border: 1px solid rgba(201, 169, 98, 0.3);
+            border-left: 3px solid var(--gold);
+            padding: 16px 18px;
+            margin-bottom: 24px;
+        }
+        
+        @media (min-width: 480px) {
+            .warning-box {
+                padding: 20px 24px;
+                margin-bottom: 32px;
+            }
+        }
+        
+        .warning-box p {
+            font-size: 0.85rem;
+            color: var(--gray-200);
+            margin: 0;
+            line-height: 1.7;
+        }
+        
+        @media (min-width: 480px) {
+            .warning-box p {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .warning-box strong {
+            color: var(--gold);
+        }
+        
+        /* Calendar Section */
+        .calendar-section {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            padding: 24px 16px;
+            text-align: center;
+        }
+        
+        @media (min-width: 480px) {
+            .calendar-section {
+                padding: 36px;
+            }
+        }
+        
+        .calendar-section h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        
+        @media (min-width: 480px) {
+            .calendar-section h3 {
+                font-size: 1.15rem;
+            }
+        }
+        
+        .calendar-section > p {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            margin-bottom: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        @media (min-width: 480px) {
+            .calendar-section > p {
+                font-size: 0.85rem;
+                margin-bottom: 28px;
+            }
+        }
+        
+        .calendar-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        @media (min-width: 480px) {
+            .calendar-buttons {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+        }
+        
+        .calendar-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-600);
+            text-decoration: none;
+            color: var(--gray-100);
+            font-weight: 500;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 480px) {
+            .calendar-btn {
+                gap: 10px;
+                padding: 14px 24px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        .calendar-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+        
+        .calendar-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        /* Alerts */
+        .alerts-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        @media (min-width: 480px) {
+            .alerts-row {
+                gap: 16px;
+                margin-top: 24px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .alerts-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .alert-box {
+            padding: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        @media (min-width: 480px) {
+            .alert-box {
+                padding: 20px 24px;
+                gap: 16px;
+            }
+        }
+        
+        .alert-box svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        @media (min-width: 480px) {
+            .alert-box svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+        
+        .alert-box.email {
+            background: rgba(201, 169, 98, 0.05);
+            border: 1px solid rgba(201, 169, 98, 0.2);
+        }
+        
+        .alert-box.email svg {
+            color: var(--gold);
+        }
+        
+        .alert-box.whatsapp {
+            background: rgba(37, 211, 102, 0.05);
+            border: 1px solid rgba(37, 211, 102, 0.2);
+        }
+        
+        .alert-box.whatsapp svg {
+            color: var(--whatsapp);
+        }
+        
+        .alert-content h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        @media (min-width: 480px) {
+            .alert-content h4 {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .alert-box.email .alert-content h4 {
+            color: var(--gold);
+        }
+        
+        .alert-box.whatsapp .alert-content h4 {
+            color: var(--whatsapp);
+        }
+        
+        .alert-content p {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        @media (min-width: 480px) {
+            .alert-content p {
+                font-size: 0.85rem;
+            }
+        }
+        
+        .whatsapp-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 10px;
+            padding: 8px 14px;
+            background: var(--whatsapp);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 480px) {
+            .whatsapp-cta {
+                gap: 8px;
+                margin-top: 12px;
+                padding: 10px 16px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        .whatsapp-cta:hover {
+            background: #20bd5a;
+            transform: translateY(-2px);
+        }
+        
+        .whatsapp-cta svg {
+            width: 14px;
+            height: 14px;
+            color: var(--white);
+            margin: 0;
+        }
+        
+        @media (min-width: 480px) {
+            .whatsapp-cta svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 50px 0;
+        }
+        
+        @media (min-width: 480px) {
+            .section {
+                padding: 80px 0;
+            }
+        }
+        
+        .section-dark {
+            background: var(--gray-900);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        
+        @media (min-width: 480px) {
+            .section-header {
+                margin-bottom: 50px;
+            }
+        }
+        
+        .section-label {
+            display: inline-block;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--gray-700);
+        }
+        
+        @media (min-width: 480px) {
+            .section-label {
+                font-size: 0.65rem;
+                letter-spacing: 4px;
+                margin-bottom: 14px;
+                padding-bottom: 14px;
+            }
+        }
+        
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+            font-weight: 500;
+            color: var(--white);
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 16px;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--gold), var(--gray-700));
+        }
+        
+        @media (min-width: 480px) {
+            .timeline::before {
+                left: 20px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .timeline::before {
+                left: 50%;
+            }
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            position: relative;
+            padding-bottom: 28px;
+            padding-left: 44px;
+        }
+        
+        @media (min-width: 480px) {
+            .timeline-item {
+                gap: 28px;
+                padding-bottom: 40px;
+                padding-left: 54px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .timeline-item {
+                padding-left: 0;
+                width: 50%;
+                margin-left: 50%;
+                padding-left: 40px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                margin-left: 0;
+                padding-left: 0;
+                padding-right: 40px;
+                text-align: right;
+                flex-direction: row-reverse;
+            }
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 6px;
+            width: 20px;
+            height: 20px;
+            background: var(--black);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+        
+        @media (min-width: 480px) {
+            .timeline-dot {
+                left: 8px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .timeline-dot {
+                left: -12px;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: auto;
+                right: -12px;
+            }
+        }
+        
+        .timeline-dot svg {
+            width: 10px;
+            height: 10px;
+            color: var(--gold);
+        }
+        
+        @media (min-width: 480px) {
+            .timeline-dot svg {
+                width: 12px;
+                height: 12px;
+            }
+        }
+        
+        .timeline-content {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            padding: 16px;
+        }
+        
+        @media (min-width: 480px) {
+            .timeline-content {
+                padding: 22px;
+            }
+        }
+        
+        .timeline-time {
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+        
+        @media (min-width: 480px) {
+            .timeline-time {
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+                margin-bottom: 6px;
+            }
+        }
+        
+        .timeline-content h4 {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+        
+        @media (min-width: 480px) {
+            .timeline-content h4 {
+                font-size: 1rem;
+                margin-bottom: 6px;
+            }
+        }
+        
+        .timeline-content p {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        @media (min-width: 480px) {
+            .timeline-content p {
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Prepare Section */
+        .prepare-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        
+        @media (min-width: 480px) {
+            .prepare-grid {
+                gap: 20px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .prepare-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .prepare-card {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            padding: 24px 18px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 480px) {
+            .prepare-card {
+                padding: 32px 24px;
+            }
+        }
+        
+        .prepare-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+        
+        .prepare-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-600);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        
+        @media (min-width: 480px) {
+            .prepare-icon {
+                width: 50px;
+                height: 50px;
+                margin: 0 auto 20px;
+            }
+        }
+        
+        .prepare-icon svg {
+            width: 22px;
+            height: 22px;
+            color: var(--gold);
+        }
+        
+        .prepare-card h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+        
+        .prepare-card p {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+        
+        /* OTO Section */
+        .oto-section {
+            padding: 50px 0;
+            background: linear-gradient(180deg, var(--black) 0%, var(--gray-900) 100%);
+            position: relative;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-section {
+                padding: 80px 0;
+            }
+        }
+        
+        .oto-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(180deg, transparent, var(--gold));
+        }
+        
+        @media (min-width: 480px) {
+            .oto-section::before {
+                height: 50px;
+            }
+        }
+        
+        .oto-card {
+            background: var(--gray-800);
+            border: 1px solid var(--gold);
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .oto-header {
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
+            padding: 20px 16px;
+            text-align: center;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-header {
+                padding: 28px 40px;
+            }
+        }
+        
+        .oto-badge {
+            display: inline-block;
+            background: rgba(0,0,0,0.2);
+            color: var(--black);
+            padding: 5px 12px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-badge {
+                padding: 6px 16px;
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+            }
+        }
+        
+        .oto-header h2 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--black);
+            line-height: 1.4;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-header h2 {
+                font-size: 1.35rem;
+            }
+        }
+        
+        .oto-body {
+            padding: 20px 16px;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-body {
+                padding: 40px;
+            }
+        }
+        
+        .oto-teaser {
+            text-align: center;
+            margin-bottom: 24px;
+            padding: 20px 16px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-700);
+        }
+        
+        @media (min-width: 480px) {
+            .oto-teaser {
+                margin-bottom: 36px;
+                padding: 28px;
+            }
+        }
+        
+        .oto-teaser h3 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-teaser h3 {
+                font-size: 1.2rem;
+                margin-bottom: 12px;
+            }
+        }
+        
+        .oto-teaser p {
+            font-size: 0.85rem;
+            color: var(--gray-300);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-teaser p {
+                font-size: 0.95rem;
+                line-height: 1.8;
+            }
+        }
+        
+        .oto-teaser strong {
+            color: var(--gold);
+        }
+        
+        .oto-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-features {
+                gap: 14px;
+                margin-bottom: 40px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .oto-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .oto-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-700);
+        }
+        
+        @media (min-width: 480px) {
+            .oto-feature {
+                gap: 14px;
+                padding: 18px;
+            }
+        }
+        
+        .oto-feature svg {
+            width: 16px;
+            height: 16px;
+            color: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-feature svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        
+        .oto-feature-text h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 2px;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-feature-text h4 {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .oto-feature-text p {
+            font-size: 0.75rem;
+            color: var(--gray-400);
+            margin: 0;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-feature-text p {
+                font-size: 0.8rem;
+            }
+        }
+        
+        .oto-feature.blurred {
+            filter: blur(6px);
+            user-select: none;
+            pointer-events: none;
+            position: relative;
+        }
+        
+        .oto-feature.blurred::after {
+            content: '🔒';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2rem;
+            filter: blur(0);
+            opacity: 0.7;
+        }
+        
+        .oto-cta {
+            text-align: center;
+            padding-top: 16px;
+            border-top: 1px solid var(--gray-700);
+        }
+        
+        @media (min-width: 480px) {
+            .oto-cta {
+                padding-top: 20px;
+            }
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 24px;
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--black);
+            background: var(--gold);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 480px) {
+            .btn-primary {
+                gap: 10px;
+                padding: 18px 40px;
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+            }
+        }
+        
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+        
+        .btn-primary svg {
+            width: 14px;
+            height: 14px;
+        }
+        
+        @media (min-width: 480px) {
+            .btn-primary svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+        
+        .oto-note {
+            margin-top: 16px;
+            font-size: 0.75rem;
+            color: var(--gray-400);
+            font-style: italic;
+        }
+        
+        @media (min-width: 480px) {
+            .oto-note {
+                margin-top: 20px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        .oto-note strong {
+            color: var(--gold);
+            font-style: normal;
+        }
+        
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4px;
+        }
+        
+        @media (min-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            filter: brightness(0.8);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(1);
+        }
+        
+        .gallery-label {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Resources Section */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        
+        @media (min-width: 480px) {
+            .resources-grid {
+                gap: 20px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .resources-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .resource-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 480px) {
+            .resource-card {
+                gap: 20px;
+                padding: 28px;
+            }
+        }
+        
+        .resource-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+        
+        .resource-icon {
+            width: 44px;
+            height: 50px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-600);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .resource-icon svg {
+            width: 22px;
+            height: 22px;
+            color: var(--gold);
+        }
+        
+        .resource-content h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+        
+        .resource-content p {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            margin: 0;
+        }
+        
+        /* Social Section */
+        .social-section {
+            padding: 50px 0;
+            background: var(--gray-800);
+            text-align: center;
+            border-top: 1px solid var(--gray-700);
+        }
+        
+        .social-section h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        
+        @media (min-width: 480px) {
+            .social-title {
+                margin-bottom: 20px;
+            }
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        @media (min-width: 480px) {
+            .social-links {
+                gap: 14px;
+            }
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-400);
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 480px) {
+            .social-link {
+                width: 44px;
+                height: 44px;
+            }
+        }
+        
+        .social-link:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-4px);
+        }
+        
+        .social-link svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        @media (min-width: 480px) {
+            .social-link svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        
+        /* Footer */
+        footer {
+            padding: 32px 0;
+            background: var(--black);
+            border-top: 1px solid var(--gray-800);
+        }
+        
+        @media (min-width: 480px) {
+            footer {
+                padding: 40px 0;
+            }
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+        }
+        
+        @media (min-width: 480px) {
+            .footer-content {
+                gap: 14px;
+            }
+        }
+        
+        footer .logo img {
+            height: 24px;
+            opacity: 0.8;
+        }
+        
+        @media (min-width: 480px) {
+            footer .logo img {
+                height: 28px;
+            }
+        }
+        
+        footer p {
+            font-size: 0.7rem;
+            color: var(--gray-500);
+        }
+        
+        @media (min-width: 480px) {
+            footer p {
+                font-size: 0.75rem;
+            }
+        }
+        
+        footer a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--gold);
+        }
+        
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+        
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -10px;
+            animation: confetti-fall 3s ease-out forwards;
+        }
+        
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Confetti -->
+    <div class="confetti" id="confetti"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="LOGO_NEOABITA__1_.svg" alt="Neoabita">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Success Hero -->
+    <section class="success-hero">
+        <div class="container-narrow">
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h1>Félicitations <span id="user-name">!</span></h1>
+            <p>Votre place pour le webinaire est confirmée. Vous allez recevoir un email et un message WhatsApp avec tous les détails.</p>
+        </div>
+    </section>
+
+    <!-- Event Card -->
+    <section style="padding: 0 0 80px;">
+        <div class="container-narrow">
+            <div class="event-card">
+                <div class="event-header">
+                    <span class="event-badge">Live</span>
+                    <span class="event-title">15 ans d'expertise pour réussir votre villa (construction ou rénovation)</span>
+                </div>
+                
+                <div class="event-body">
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <div class="event-detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            </div>
+                            <div class="event-detail-label">Date</div>
+                            <div class="event-detail-value">Jeudi 16 janvier</div>
+                        </div>
+                        
+                        <div class="event-detail">
+                            <div class="event-detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div class="event-detail-label">Heure</div>
+                            <div class="event-detail-value">19h00</div>
+                        </div>
+                        
+                        <div class="event-detail">
+                            <div class="event-detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div class="event-detail-label">Format</div>
+                            <div class="event-detail-value">Direct + Questions/Réponses</div>
+                        </div>
+                        
+                        <div class="event-detail">
+                            <div class="event-detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div class="event-detail-label">Durée</div>
+                            <div class="event-detail-value">60 minutes</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Warning Box -->
+                    <div class="warning-box">
+                        <p>⚠️ <strong>Important :</strong> Ce webinaire est diffusé en direct une seule fois et <strong>aucun replay ne sera disponible</strong>. Si vous le manquez, vous perdrez l'accès à 15 ans d'expertise condensés en 60 minutes — et aux bonus exclusifs réservés aux participants live.</p>
+                    </div>
+                    
+                    <!-- Calendar Section -->
+                    <div class="calendar-section">
+                        <h3>Ne manquez pas le webinaire</h3>
+                        <p>N'oubliez pas d'ajouter l'événement à votre calendrier pour recevoir un rappel automatique et être bien présent lors du live.</p>
+                        
+                        <div class="calendar-buttons">
+                            <a href="#" class="calendar-btn" id="google-cal">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.998-8.29l-.032-.029-4.3-4.073 1.262-1.336 3.069 2.906 5.259-5.259 1.414 1.414-6.672 6.377z"/></svg>
+                                Google Agenda
+                            </a>
+                            <a href="#" class="calendar-btn" id="apple-cal">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                                Apple Calendar
+                            </a>
+                            <a href="#" class="calendar-btn" id="outlook-cal">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.88 12.04q0 .45-.11.87-.1.41-.33.74-.22.33-.58.52-.37.2-.87.2t-.85-.2q-.35-.21-.57-.55-.22-.33-.33-.75-.1-.42-.1-.86t.1-.87q.1-.43.34-.76.22-.34.59-.54.36-.2.87-.2t.86.2q.35.2.58.55.22.34.33.77.1.43.1.88zm-2.01 0q0-.71-.25-1.08-.24-.38-.74-.38-.5 0-.75.38-.24.37-.24 1.08 0 .7.24 1.08.25.37.75.37t.74-.37q.25-.39.25-1.08zm8.89 1.68l-.32.92h-1.13l1.58-4.49h1.31l1.58 4.49h-1.19l-.32-.92h-1.51zm1.24-1.86q-.1-.27-.19-.61-.09-.35-.15-.5-.06.16-.16.51t-.18.6l-.28.84h.94l-.28-.84zM21 4.5v15c0 .83-.67 1.5-1.5 1.5H12v-2.04h6V6.04H6V5h12V3.5c0-.83.67-1.5 1.5-1.5S21 2.67 21 3.5v1zm-6.75 9.39h-1.16l-1.1-1.72-1.11 1.72H9.72l1.74-2.45-1.58-2.29h1.14l.99 1.58 1-1.58h1.13l-1.57 2.26 1.68 2.48z"/></svg>
+                                Outlook
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Alerts -->
+                    <div class="alerts-row">
+                        <div class="alert-box email">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <div class="alert-content">
+                                <h4>Vérifiez votre boîte mail</h4>
+                                <p>Un email de confirmation vient d'être envoyé. Pensez à vérifier vos spams ou promotions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alert-box whatsapp">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            <div class="alert-content">
+                                <h4>Message WhatsApp envoyé</h4>
+                                <p>Vous recevrez vos rappels et le lien d'accès directement sur WhatsApp.</p>
+                                <a href="https://wa.me/33XXXXXXXXX?text=Bonjour%2C%20je%20viens%20de%20m%27inscrire%20au%20webinaire%20Neoabita" class="whatsapp-cta" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                    Vérifier la réception WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section section-dark">
+        <div class="container-narrow">
+            <div class="section-header">
+                <span class="section-label">Prochaines étapes</span>
+                <h2>Ce qui va se passer</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">Maintenant</span>
+                        <h4>Email & WhatsApp de confirmation</h4>
+                        <p>Avec le récapitulatif et votre lien d'accès unique</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">J-2</span>
+                        <h4>Premier rappel</h4>
+                        <p>Un message pour bien bloquer le créneau dans votre agenda</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">J-1</span>
+                        <h4>Rappel la veille</h4>
+                        <p>Par email et WhatsApp avec vos accès</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">Jour J - 1h</span>
+                        <h4>Dernier rappel</h4>
+                        <p>Pour ne surtout pas oublier</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">Jour J - 15 min</span>
+                        <h4>Lien d'accès au live</h4>
+                        <p>Connectez-vous en avance pour tout tester</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">Jour J + 1</span>
+                        <h4>Prêt à imaginer votre villa</h4>
+                        <p>Vous aurez toutes les clés pour concrétiser le projet de vos rêves</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prepare Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Préparation</span>
+                <h2>Préparez-vous pour le webinaire</h2>
+            </div>
+            
+            <div class="prepare-grid">
+                <div class="prepare-card">
+                    <div class="prepare-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3>Référence cadastrale</h3>
+                    <p>Si vous avez un terrain, préparez la référence cadastrale de votre terrain (disponible sur cadastre.gouv.fr)</p>
+                </div>
+                
+                <div class="prepare-card">
+                    <div class="prepare-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    </div>
+                    <h3>Vos inspirations</h3>
+                    <p>Rassemblez vos photos Pinterest, magazines ou captures de villas qui vous plaisent</p>
+                </div>
+                
+                <div class="prepare-card">
+                    <div class="prepare-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <h3>Vos questions</h3>
+                    <p>Notez vos questions sur votre projet pour la session Questions/Réponses en direct</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTO Section -->
+    <section class="oto-section">
+        <div class="container-narrow">
+            <div class="oto-card">
+                <div class="oto-header">
+                    <span class="oto-badge">Réservé aux participants du live</span>
+                    <h2>Une récompense pour ceux qui vont jusqu'au bout</h2>
+                </div>
+                
+                <div class="oto-body">
+                    <div class="oto-teaser">
+                        <h3>🎁 Offre exclusive dévoilée à la fin du webinaire</h3>
+                        <p>Pour remercier ceux qui resteront jusqu'à la fin du live, Rémi dévoilera une <strong>offre exceptionnelle</strong> réservée uniquement aux participants présents. Une opportunité de faire avancer votre projet immédiatement avec un accompagnement personnalisé.</p>
+                    </div>
+                    
+                    <div class="oto-features">
+                        <div class="oto-feature blurred">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <div class="oto-feature-text">
+                                <h4>Appel expert 30 min</h4>
+                                <p>Analyse de votre terrain et projet</p>
+                            </div>
+                        </div>
+                        
+                        <div class="oto-feature blurred">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <div class="oto-feature-text">
+                                <h4>RDV architecte-designer</h4>
+                                <p>1h en visio pour vos envies</p>
+                            </div>
+                        </div>
+                        
+                        <div class="oto-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <div class="oto-feature-text">
+                                <h4>Plans 3D ultra-réalistes</h4>
+                                <p>Vues intérieures et extérieures</p>
+                            </div>
+                        </div>
+                        
+                        <div class="oto-feature blurred">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <div class="oto-feature-text">
+                                <h4>Chiffrage précis</h4>
+                                <p>Budget détaillé poste par poste</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="oto-cta">
+                        <a href="#" class="btn-primary" id="oto-cta-btn">
+                            Obtenir ma place VIP pour le webinaire
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        
+                        <p class="oto-note">💡 <strong>Astuce :</strong> Notez bien la date du live dans votre agenda. Seuls les présents auront accès à cette offre — impossible de l'obtenir après.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2>Quelques-unes de nos réalisations</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Neoabita-07-25-21.jpg" alt="Villa contemporaine">
+                    <span class="gallery-label">Villa Auvergne</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="villa-3d-realiste.png" alt="Plan 3D villa">
+                    <span class="gallery-label">Plan 3D</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=600&fit=crop" alt="Villa luxe">
+                    <span class="gallery-label">Villa Lyon</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=600&fit=crop" alt="Villa prestige">
+                    <span class="gallery-label">Villa Annecy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section">
+        <div class="container-narrow">
+            <div class="section-header">
+                <span class="section-label">Ressources</span>
+                <h2>En attendant le webinaire</h2>
+            </div>
+            
+            <div class="resources-grid">
+                <a href="https://conseils.neoabita.fr/homepage" class="resource-card" target="_blank">
+                    <div class="resource-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Guide Tendances 2026</h3>
+                        <p>Téléchargez notre guide gratuit des tendances architecturales</p>
+                    </div>
+                </a>
+                
+                <a href="https://neoabita.fr/" class="resource-card" target="_blank">
+                    <div class="resource-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Nos réalisations</h3>
+                        <p>Découvrez notre portfolio de villas haut de gamme</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="social-section">
+        <div class="container">
+            <h3>Suivez-nous</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/neoabita/" class="social-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="https://www.facebook.com/Neoabita/" class="social-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@neoabita" class="social-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/company/neoabita/" class="social-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo">
+                    <img src="LOGO_NEOABITA__1_.svg" alt="Neoabita">
+                </a>
+                <p>Constructeur & Maître d'œuvre spécialisé villa haut de gamme depuis 2010</p>
+                <p>© 2025 Neoabita. Tous droits réservés. <a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get user name from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('name');
+        if (userName) {
+            document.getElementById('user-name').textContent = userName + ' !';
+        }
+
+        // Confetti
+        function createConfetti() {
+            const confettiContainer = document.getElementById('confetti');
+            const colors = ['#C9A962', '#D4BC7B', '#4ADE80', '#22C55E'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti-piece');
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                confettiContainer.appendChild(confetti);
+            }
+            
+            setTimeout(() => {
+                confettiContainer.innerHTML = '';
+            }, 4000);
+        }
+        
+        createConfetti();
+
+        // Calendar links
+        const webinarDate = new Date('2025-01-16T19:00:00');
+        const endDate = new Date('2025-01-16T20:00:00');
+        const title = 'Webinaire Neoabita - 15 ans d\'expertise villa haut de gamme';
+        const description = 'Webinaire gratuit : 15 ans d\'expertise condensés en 60 minutes pour réussir votre projet de villa haut de gamme (construction ou rénovation). IMPORTANT : Aucun replay disponible !';
+        const location = 'En ligne (lien envoyé par email et WhatsApp)';
+
+        const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${formatDateGoogle(webinarDate)}/${formatDateGoogle(endDate)}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;
+        document.getElementById('google-cal').href = googleCalUrl;
+
+        const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Neoabita//Webinar//FR
+BEGIN:VEVENT
+DTSTART:${formatDateICS(webinarDate)}
+DTEND:${formatDateICS(endDate)}
+SUMMARY:${title}
+DESCRIPTION:${description}
+LOCATION:${location}
+END:VEVENT
+END:VCALENDAR`;
+
+        const icsBlob = new Blob([icsContent], { type: 'text/calendar' });
+        const icsUrl = URL.createObjectURL(icsBlob);
+        
+        document.getElementById('apple-cal').href = icsUrl;
+        document.getElementById('apple-cal').download = 'neoabita-webinaire.ics';
+        document.getElementById('outlook-cal').href = icsUrl;
+        document.getElementById('outlook-cal').download = 'neoabita-webinaire.ics';
+
+        function formatDateGoogle(date) {
+            return date.toISOString().replace(/-|:|\.\d\d\d/g, '');
+        }
+
+        function formatDateICS(date) {
+            return date.toISOString().replace(/-|:|\.\d\d\d/g, '').slice(0, -1) + 'Z';
+        }
+
+        // OTO button - scrolls to top to add calendar
+        document.getElementById('oto-cta-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
