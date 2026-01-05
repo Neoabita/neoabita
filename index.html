@@ -119,32 +119,41 @@
             width: auto;
         }
         
-        .header-badge {
+        .header-cta {
             display: none;
+            flex-direction: column;
             align-items: center;
-            gap: 10px;
-            background: transparent;
-            border: 1px solid var(--gold);
-            color: var(--gold);
+            text-align: center;
+            background: var(--gold);
+            color: var(--black);
             padding: 10px 24px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
         
         @media (min-width: 768px) {
-            .header-badge {
+            .header-cta {
                 display: flex;
             }
         }
         
-        .header-badge .pulse {
-            width: 8px;
-            height: 8px;
-            background: var(--gold);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
+        .header-cta:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+        
+        .header-cta-main {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .header-cta-sub {
+            font-size: 0.6rem;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: 2px;
         }
         
         @keyframes pulse {
@@ -771,11 +780,16 @@
         .hero-visual {
             position: relative;
             display: none;
+            grid-column: 1 / -1;
+            margin-top: 40px;
         }
         
         @media (min-width: 1200px) {
             .hero-visual {
-                display: block;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 20px;
+                align-items: end;
             }
         }
         
@@ -785,7 +799,7 @@
         
         .hero-image-main img {
             width: 100%;
-            height: 500px;
+            height: 400px;
             object-fit: cover;
             filter: brightness(0.9);
         }
@@ -798,28 +812,92 @@
         }
         
         .hero-image-3d {
-            position: absolute;
-            bottom: -30px;
-            left: -30px;
-            width: 260px;
             background: var(--gray-900);
             border: 1px solid var(--gray-700);
-            padding: 10px;
+            padding: 12px;
             box-shadow: var(--shadow-lg);
         }
         
         .hero-image-3d img {
             width: 100%;
-            height: 160px;
+            height: 200px;
             object-fit: cover;
         }
         
         .hero-image-3d .caption {
-            padding: 10px 0 0;
+            padding: 12px 0 0;
             font-size: 0.65rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--gold);
+            text-align: center;
+        }
+        
+        /* CTA Inline Section */
+        .cta-inline-section {
+            padding: 60px 0;
+            background: var(--black);
+        }
+        
+        @media (min-width: 480px) {
+            .cta-inline-section {
+                padding: 80px 0;
+            }
+        }
+        
+        .cta-inline {
+            text-align: center;
+        }
+        
+        .btn-cta-inline {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: var(--gold);
+            color: var(--black);
+            padding: 18px 48px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 480px) {
+            .btn-cta-inline {
+                padding: 22px 64px;
+            }
+        }
+        
+        .btn-cta-inline:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-gold);
+        }
+        
+        .btn-cta-main {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        @media (min-width: 480px) {
+            .btn-cta-main {
+                font-size: 1rem;
+                letter-spacing: 2px;
+            }
+        }
+        
+        .btn-cta-sub {
+            font-size: 0.7rem;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+        
+        @media (min-width: 480px) {
+            .btn-cta-sub {
+                font-size: 0.75rem;
+            }
         }
         
         /* What You'll Learn Section */
@@ -1773,10 +1851,10 @@
                 <a href="#" class="logo">
                     <img src="LOGO_NEOABITA__1_.svg" alt="Neoabita">
                 </a>
-                <div class="header-badge">
-                    <span class="pulse"></span>
-                    Webinaire gratuit
-                </div>
+                <a href="#form-section" class="header-cta">
+                    <span class="header-cta-main">Réservez ma place</span>
+                    <span class="header-cta-sub">au webinaire gratuit</span>
+                </a>
             </div>
         </div>
     </header>
@@ -1958,6 +2036,18 @@
         </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="cta-inline-section">
+        <div class="container">
+            <div class="cta-inline">
+                <a href="#form-section" class="btn-cta-inline">
+                    <span class="btn-cta-main">Réservez ma place</span>
+                    <span class="btn-cta-sub">au webinaire gratuit</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Masterlib Section -->
     <section class="masterlib-section">
         <div class="container">
@@ -2116,6 +2206,18 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-inline-section">
+        <div class="container">
+            <div class="cta-inline">
+                <a href="#form-section" class="btn-cta-inline">
+                    <span class="btn-cta-main">Réservez ma place</span>
+                    <span class="btn-cta-sub">au webinaire gratuit</span>
+                </a>
             </div>
         </div>
     </section>
