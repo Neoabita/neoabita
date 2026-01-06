@@ -1223,7 +1223,7 @@
         }
         
         .oto-feature.blurred {
-            filter: blur(6px);
+            filter: blur(4px);
             user-select: none;
             pointer-events: none;
             position: relative;
@@ -1317,74 +1317,204 @@
             font-style: normal;
         }
         
-        /* Gallery Section */
-        .gallery-grid {
+        /* Carousels Section */
+        .carousels-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 4px;
+            grid-template-columns: 1fr;
+            gap: 40px;
         }
         
         @media (min-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(4, 1fr);
+            .carousels-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
             }
         }
         
-        .gallery-item {
-            position: relative;
-            aspect-ratio: 1;
-            overflow: hidden;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            filter: brightness(0.8);
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-            filter: brightness(1);
-        }
-        
-        .gallery-label {
-            position: absolute;
-            bottom: 14px;
-            left: 14px;
-            color: var(--white);
-            font-size: 0.7rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .gallery-item:hover .gallery-label {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Resources Section */
-        .resources-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
+        .carousel-block {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-700);
+            padding: 20px;
         }
         
         @media (min-width: 480px) {
-            .resources-grid {
-                gap: 20px;
+            .carousel-block {
+                padding: 24px;
             }
         }
         
-        @media (min-width: 768px) {
-            .resources-grid {
-                grid-template-columns: repeat(2, 1fr);
+        .carousel-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        @media (min-width: 480px) {
+            .carousel-title {
+                font-size: 1.25rem;
+                margin-bottom: 20px;
             }
+        }
+        
+        .carousel {
+            position: relative;
+        }
+        
+        .carousel-track {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+        }
+        
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .carousel-slide.active {
+            opacity: 1;
+        }
+        
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .carousel-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 12px;
+        }
+        
+        .carousel-btn {
+            background: var(--gray-700);
+            border: 1px solid var(--gray-600);
+            color: var(--gold);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-btn:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+        
+        .carousel-dots {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gray-600);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background: var(--gold);
+        }
+        
+        /* Modal Mentions Légales */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: var(--gray-900);
+            border: 1px solid var(--gray-700);
+            max-width: 700px;
+            width: 100%;
+            padding: 32px;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        @media (min-width: 480px) {
+            .modal-content {
+                padding: 48px;
+            }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: var(--gray-400);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            color: var(--gold);
+        }
+        
+        .modal-content h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 24px;
+        }
+        
+        .modal-content h3 {
+            font-size: 1rem;
+            color: var(--white);
+            margin: 20px 0 10px;
+        }
+        
+        .modal-content p {
+            font-size: 0.85rem;
+            color: var(--gray-300);
+            line-height: 1.7;
+        }
+        
+        .footer-legal {
+            font-size: 0.7rem !important;
+            color: var(--gray-500) !important;
+            margin-top: 12px;
+        }
+
+        /* Resources Section */
+        .resources-grid {
+            display: flex;
+            justify-content: center;
         }
         
         .resource-card {
@@ -1397,6 +1527,8 @@
             text-decoration: none;
             color: inherit;
             transition: all 0.3s ease;
+            max-width: 400px;
+        }
         }
         
         @media (min-width: 480px) {
@@ -1892,7 +2024,7 @@
                     
                     <div class="oto-cta">
                         <a href="#" class="btn-primary" id="oto-cta-btn">
-                            Obtenir ma place VIP pour le webinaire
+                            Obtenir ma place pour le webinaire
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                         </a>
                         
@@ -1903,30 +2035,46 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Carousels Section -->
     <section class="section section-dark">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Portfolio</span>
-                <h2>Quelques-unes de nos réalisations</h2>
-            </div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="Neoabita-07-25-21.jpg" alt="Villa contemporaine">
-                    <span class="gallery-label">Villa Auvergne</span>
+            <div class="carousels-grid">
+                <div class="carousel-block">
+                    <h3 class="carousel-title">Nos réalisations</h3>
+                    <div class="carousel" data-carousel="realisations">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active">
+                                <img src="villa_jolie_realisation.jpeg" alt="Villa contemporaine Neoabita">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="Neoabita-07-25-21.jpg" alt="Villa haut de gamme Neoabita">
+                            </div>
+                        </div>
+                        <div class="carousel-nav">
+                            <button class="carousel-btn prev" aria-label="Précédent">‹</button>
+                            <div class="carousel-dots"></div>
+                            <button class="carousel-btn next" aria-label="Suivant">›</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="villa-3d-realiste.png" alt="Plan 3D villa">
-                    <span class="gallery-label">Plan 3D</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=600&fit=crop" alt="Villa luxe">
-                    <span class="gallery-label">Villa Lyon</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=600&fit=crop" alt="Villa prestige">
-                    <span class="gallery-label">Villa Annecy</span>
+                
+                <div class="carousel-block">
+                    <h3 class="carousel-title">Nos plans 3D ultra-réalistes</h3>
+                    <div class="carousel" data-carousel="plans3d">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active">
+                                <img src="VIlla_jolie_plans_3D.jpeg" alt="Plan 3D villa luxe">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="villa-3d-realiste.png" alt="Plan 3D villa Neoabita">
+                            </div>
+                        </div>
+                        <div class="carousel-nav">
+                            <button class="carousel-btn prev" aria-label="Précédent">‹</button>
+                            <div class="carousel-dots"></div>
+                            <button class="carousel-btn next" aria-label="Suivant">›</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1950,16 +2098,6 @@
                         <p>Téléchargez notre guide gratuit des tendances architecturales</p>
                     </div>
                 </a>
-                
-                <a href="https://neoabita.fr/" class="resource-card" target="_blank">
-                    <div class="resource-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    </div>
-                    <div class="resource-content">
-                        <h3>Nos réalisations</h3>
-                        <p>Découvrez notre portfolio de villas haut de gamme</p>
-                    </div>
-                </a>
             </div>
         </div>
     </section>
@@ -1972,13 +2110,13 @@
                 <a href="https://www.instagram.com/neoabita/" class="social-link" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                 </a>
-                <a href="https://www.facebook.com/Neoabita/" class="social-link" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <a href="https://www.tiktok.com/@neoabita" class="social-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
                 </a>
-                <a href="https://www.youtube.com/@neoabita" class="social-link" target="_blank">
+                <a href="https://www.youtube.com/channel/UCAXSI0nQdM-HTVQ4BrdTlBg?sub_confirmation=1" class="social-link" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
                 </a>
-                <a href="https://www.linkedin.com/company/neoabita/" class="social-link" target="_blank">
+                <a href="https://fr.linkedin.com/company/neoabita" class="social-link" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                 </a>
             </div>
@@ -1993,10 +2131,55 @@
                     <img src="LOGO_NEOABITA__1_.svg" alt="Neoabita">
                 </a>
                 <p>Constructeur & Maître d'œuvre spécialisé villa haut de gamme depuis 2010</p>
-                <p>© 2025 Neoabita. Tous droits réservés. <a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></p>
+                <p class="footer-legal">
+                    NEOABITA - AGR CONSTRUCTEUR • SAS au capital de 24 850 € • 31 Cours Fauriel, 42000 Saint-Étienne<br>
+                    SIRET 812 390 409 00033 • RCS Saint-Étienne 812 390 409 • NAF 7112B
+                </p>
+                <p>© 2025 Neoabita. Tous droits réservés. <a href="#mentions-legales" id="open-mentions">Mentions légales</a></p>
             </div>
         </div>
     </footer>
+    
+    <!-- Modal Mentions Légales -->
+    <div class="modal-overlay" id="mentions-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            <h2>Mentions Légales</h2>
+            
+            <h3>Éditeur du site</h3>
+            <p>
+                <strong>NEOABITA - AGR CONSTRUCTEUR</strong><br>
+                Société par Actions Simplifiée (SAS) au capital de 24 850 €<br>
+                Siège social : 31 Cours Fauriel, 42000 Saint-Étienne, France<br>
+                SIRET : 812 390 409 00033<br>
+                RCS Saint-Étienne : 812 390 409<br>
+                Code NAF : 7112B - Ingénierie, études techniques<br>
+                N° TVA Intracommunautaire : FR 81 812390409
+            </p>
+            
+            <h3>Directeur de la publication</h3>
+            <p>M. Rémi Agrain, en qualité de représentant légal.</p>
+            
+            <h3>Hébergement</h3>
+            <p>
+                <strong>Vercel Inc.</strong><br>
+                440 N Barranca Ave #4133, Covina, CA 91723, États-Unis<br>
+                Site web : vercel.com
+            </p>
+            
+            <h3>Propriété intellectuelle</h3>
+            <p>L'ensemble du contenu de ce site (textes, images, vidéos, logos, graphismes) est la propriété exclusive de NEOABITA - AGR CONSTRUCTEUR ou de ses partenaires. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site est interdite sans autorisation écrite préalable.</p>
+            
+            <h3>Données personnelles</h3>
+            <p>Les informations recueillies via les formulaires de ce site sont destinées à NEOABITA - AGR CONSTRUCTEUR pour la gestion des inscriptions au webinaire et le suivi commercial. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez-nous à l'adresse du siège social.</p>
+            
+            <h3>Cookies</h3>
+            <p>Ce site utilise des cookies à des fins d'analyse et d'amélioration de l'expérience utilisateur (Microsoft Clarity). En poursuivant votre navigation, vous acceptez l'utilisation de ces cookies.</p>
+            
+            <h3>Contact</h3>
+            <p>Pour toute question, vous pouvez nous contacter via le site neoabita.fr ou à l'adresse du siège social.</p>
+        </div>
+    </div>
 
     <script>
         // Get user name from URL
@@ -2071,6 +2254,66 @@ END:VCALENDAR`;
         document.getElementById('oto-cta-btn').addEventListener('click', (e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Carousels
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const track = carousel.querySelector('.carousel-track');
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dotsContainer = carousel.querySelector('.carousel-dots');
+            const prevBtn = carousel.querySelector('.carousel-btn.prev');
+            const nextBtn = carousel.querySelector('.carousel-btn.next');
+            let currentIndex = 0;
+
+            // Create dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('carousel-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+            function goToSlide(index) {
+                slides[currentIndex].classList.remove('active');
+                dots[currentIndex].classList.remove('active');
+                currentIndex = index;
+                if (currentIndex >= slides.length) currentIndex = 0;
+                if (currentIndex < 0) currentIndex = slides.length - 1;
+                slides[currentIndex].classList.add('active');
+                dots[currentIndex].classList.add('active');
+            }
+
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+            // Auto-play
+            setInterval(() => goToSlide(currentIndex + 1), 5000);
+        });
+
+        // Modal Mentions Légales
+        const modal = document.getElementById('mentions-modal');
+        const openBtn = document.getElementById('open-mentions');
+        const closeBtn = document.getElementById('close-modal');
+
+        openBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     </script>
 </body>
