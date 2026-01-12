@@ -1778,7 +1778,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                             </div>
                             <div class="event-detail-label">Date</div>
-                            <div class="event-detail-value">Jeudi 16 janvier</div>
+                            <div class="event-detail-value">Jeudi 12 février</div>
                         </div>
                         
                         <div class="event-detail">
@@ -1786,7 +1786,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                             </div>
                             <div class="event-detail-label">Heure</div>
-                            <div class="event-detail-value">19h00</div>
+                            <div class="event-detail-value">18h30</div>
                         </div>
                         
                         <div class="event-detail">
@@ -2113,7 +2113,7 @@
                     NEOABITA - AGR CONSTRUCTEUR • SAS au capital de 24 850 € • 31 Cours Fauriel, 42000 Saint-Étienne<br>
                     SIRET 812 390 409 00033 • RCS Saint-Étienne 812 390 409 • NAF 7112B
                 </p>
-                <p>© 2025 Neoabita. Tous droits réservés. <a href="#mentions-legales" id="open-mentions">Mentions légales</a></p>
+                <p>© 2026 Neoabita. Tous droits réservés. <a href="#mentions-legales" id="open-mentions">Mentions légales</a></p>
             </div>
         </div>
     </footer>
@@ -2191,13 +2191,13 @@
         createConfetti();
 
         // Calendar links
-        const webinarDate = new Date('2025-01-16T19:00:00');
-        const endDate = new Date('2025-01-16T20:00:00');
+        const webinarDate = new Date('2026-02-12T18:30:00');
+        const endDate = new Date('2026-02-12T19:30:00');
         const title = 'Webinaire Neoabita - 15 ans d\'expertise villa haut de gamme';
         const description = 'Webinaire gratuit : 15 ans d\'expertise condensés en 60 minutes pour réussir votre projet de villa haut de gamme (construction ou rénovation). IMPORTANT : Aucun replay disponible !';
-        const location = 'En ligne (lien envoyé par email et WhatsApp)';
+        const eventLocation = 'En ligne (lien envoyé par email et WhatsApp)';
 
-        const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${formatDateGoogle(webinarDate)}/${formatDateGoogle(endDate)}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;
+        const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${formatDateGoogle(webinarDate)}/${formatDateGoogle(endDate)}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(eventLocation)}`;
         document.getElementById('google-cal').href = googleCalUrl;
 
         const icsContent = `BEGIN:VCALENDAR
@@ -2208,7 +2208,7 @@ DTSTART:${formatDateICS(webinarDate)}
 DTEND:${formatDateICS(endDate)}
 SUMMARY:${title}
 DESCRIPTION:${description}
-LOCATION:${location}
+LOCATION:${eventLocation}
 END:VEVENT
 END:VCALENDAR`;
 
