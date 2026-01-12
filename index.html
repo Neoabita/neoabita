@@ -2464,13 +2464,43 @@
             });
         });
 
-        // Form submission
+        // Form submission avec intégration Brevo
         document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', (e) => {
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault();
+                
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = 'Inscription en cours...';
+                submitBtn.disabled = true;
+                
                 const formData = new FormData(form);
                 const data = Object.fromEntries(formData);
-                console.log('Form submitted:', data);
+                
+                try {
+                    // Envoi à Brevo via l'API serverless
+                    const response = await fetch('/api/subscribe', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            email: data.email,
+                            firstName: data.firstname,
+                            phone: data.phone,
+                            source: 'neoabita-webinaire'
+                        })
+                    });
+                    
+                    const result = await response.json();
+                    console.log('Brevo response:', result);
+                    
+                } catch (error) {
+                    console.error('Erreur inscription Brevo:', error);
+                    // On continue quand même vers la confirmation
+                }
+                
+                // Redirection vers la page de confirmation
                 window.location.href = 'confirmation.html?name=' + encodeURIComponent(data.firstname);
             });
         });
