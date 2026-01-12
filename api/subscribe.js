@@ -57,7 +57,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         email: email,
         attributes: {
-          FIRSTNAME: firstName || '',
+          PRENOM: firstName || '',
           SMS: formattedPhone,
           SOURCE: source || 'neoabita-webinaire'
         },
@@ -81,7 +81,7 @@ export default async function handler(req, res) {
         },
         body: JSON.stringify({
           attributes: {
-            FIRSTNAME: firstName || '',
+            PRENOM: firstName || '',
             SMS: formattedPhone,
             SOURCE: source || 'neoabita-webinaire'
           },
