@@ -548,6 +548,127 @@
             }
         }
         
+        /* Video Section */
+        .video-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-700);
+            overflow: hidden;
+        }
+        
+        @media (min-width: 480px) {
+            .video-wrapper {
+                margin-bottom: 24px;
+            }
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .video-controls {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        @media (min-width: 480px) {
+            .video-controls {
+                bottom: 16px;
+                gap: 10px;
+            }
+        }
+        
+        .video-control-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            padding: 8px 12px;
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-height: 38px;
+            min-width: 38px;
+            border-radius: 6px;
+        }
+        
+        @media (min-width: 480px) {
+            .video-control-btn {
+                padding: 10px 16px;
+                font-size: 0.7rem;
+                gap: 6px;
+                min-height: 42px;
+                min-width: 42px;
+                border-radius: 8px;
+            }
+        }
+        
+        .video-control-btn:hover {
+            background: rgba(40, 40, 40, 0.9);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+        
+        .video-control-btn:active {
+            transform: scale(0.96);
+        }
+        
+        .video-control-btn.active {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--black);
+        }
+        
+        .video-control-btn svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 480px) {
+            .video-control-btn svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+        
+        .speed-btn .speed-value {
+            font-weight: 600;
+            min-width: 24px;
+            text-align: center;
+        }
+        
+        @media (min-width: 480px) {
+            .speed-btn .speed-value {
+                min-width: 28px;
+            }
+        }
+        
         /* Speaker badge */
         .speaker-badge {
             display: flex;
@@ -1964,6 +2085,36 @@
                         </div>
                     </div>
                     
+                    <!-- Video Presentation -->
+                    <div class="video-wrapper">
+                        <div class="video-container">
+                            <iframe 
+                                id="vimeo-player"
+                                src="https://player.vimeo.com/video/1154677452?badge=0&autopause=0&player_id=vimeo-player&app_id=58479&muted=1"
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                                title="Présentation du webinaire Neoabita">
+                            </iframe>
+                            <div class="video-controls">
+                                <button class="video-control-btn mute-btn" id="muteBtn" title="Activer le son">
+                                    <svg id="muteIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                                    </svg>
+                                    <span id="muteText">Son</span>
+                                </button>
+                                <button class="video-control-btn speed-btn" id="speedBtn" title="Changer la vitesse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span class="speed-value" id="speedValue">1x</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="speaker-badge">
                         <img src="remi-agrain.png" alt="Rémi Agrain" class="speaker-avatar">
                         <div class="speaker-info">
@@ -2562,6 +2713,70 @@
 
             // Auto-play
             setInterval(() => goToSlide(currentIndex + 1), 5000);
+        });
+    </script>
+    
+    <!-- Vimeo Player SDK -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    
+    <script>
+        // Vimeo Player Controls
+        document.addEventListener('DOMContentLoaded', function() {
+            const iframe = document.getElementById('vimeo-player');
+            const player = new Vimeo.Player(iframe);
+            
+            const muteBtn = document.getElementById('muteBtn');
+            const muteIcon = document.getElementById('muteIcon');
+            const muteText = document.getElementById('muteText');
+            const speedBtn = document.getElementById('speedBtn');
+            const speedValue = document.getElementById('speedValue');
+            
+            let isMuted = true;
+            const speeds = [1, 1.25, 1.5, 1.75, 2];
+            let currentSpeedIndex = 0;
+            
+            // Mute/Unmute icon SVGs
+            const mutedSvg = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>';
+            const unmutedSvg = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>';
+            
+            // Toggle mute
+            muteBtn.addEventListener('click', function() {
+                isMuted = !isMuted;
+                player.setMuted(isMuted);
+                
+                if (isMuted) {
+                    muteIcon.innerHTML = mutedSvg;
+                    muteBtn.classList.remove('active');
+                    muteBtn.title = 'Activer le son';
+                } else {
+                    muteIcon.innerHTML = unmutedSvg;
+                    muteBtn.classList.add('active');
+                    muteBtn.title = 'Couper le son';
+                }
+            });
+            
+            // Change playback speed
+            speedBtn.addEventListener('click', function() {
+                currentSpeedIndex = (currentSpeedIndex + 1) % speeds.length;
+                const newSpeed = speeds[currentSpeedIndex];
+                player.setPlaybackRate(newSpeed);
+                speedValue.textContent = newSpeed + 'x';
+                
+                if (newSpeed !== 1) {
+                    speedBtn.classList.add('active');
+                } else {
+                    speedBtn.classList.remove('active');
+                }
+            });
+            
+            // Sync mute state with player
+            player.getMuted().then(function(muted) {
+                isMuted = muted;
+                if (!isMuted) {
+                    muteIcon.innerHTML = unmutedSvg;
+                    muteBtn.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
