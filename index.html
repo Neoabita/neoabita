@@ -589,14 +589,55 @@
             cursor: default;
         }
         
+        .video-time-remaining {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            padding: 6px 10px;
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 500;
+            border-radius: 6px;
+            z-index: 10;
+        }
+        
+        @media (min-width: 480px) {
+            .video-time-remaining {
+                top: 12px;
+                right: 12px;
+                padding: 8px 12px;
+                font-size: 0.7rem;
+                gap: 6px;
+            }
+        }
+        
+        .video-time-remaining svg {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+            color: var(--gold);
+        }
+        
+        @media (min-width: 480px) {
+            .video-time-remaining svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+        
         .video-controls {
             position: absolute;
             bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 12px;
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 8px;
             z-index: 10;
         }
@@ -604,6 +645,7 @@
         @media (min-width: 480px) {
             .video-controls {
                 bottom: 16px;
+                left: 16px;
                 gap: 10px;
             }
         }
@@ -2106,6 +2148,13 @@
                                 title="Présentation du webinaire Neoabita">
                             </iframe>
                             <div class="video-overlay"></div>
+                            <div class="video-time-remaining" id="timeRemaining">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span id="timeRemainingText">--:--</span>
+                            </div>
                             <div class="video-controls">
                                 <button class="video-control-btn mute-btn" id="muteBtn" title="Activer le son">
                                     <svg id="muteIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2787,6 +2836,26 @@
                     muteIcon.innerHTML = unmutedSvg;
                     muteBtn.classList.add('active');
                 }
+            });
+            
+            // Time remaining display
+            const timeRemainingText = document.getElementById('timeRemainingText');
+            let videoDuration = 0;
+            
+            player.getDuration().then(function(duration) {
+                videoDuration = duration;
+                updateTimeRemaining(0);
+            });
+            
+            function updateTimeRemaining(currentTime) {
+                const remaining = Math.max(0, videoDuration - currentTime);
+                const minutes = Math.floor(remaining / 60);
+                const seconds = Math.floor(remaining % 60);
+                timeRemainingText.textContent = minutes + ':' + String(seconds).padStart(2, '0');
+            }
+            
+            player.on('timeupdate', function(data) {
+                updateTimeRemaining(data.seconds);
             });
         });
     </script>
