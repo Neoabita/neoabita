@@ -579,6 +579,16 @@
             border: 0;
         }
         
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+            cursor: default;
+        }
+        
         .video-controls {
             position: absolute;
             bottom: 12px;
@@ -2090,11 +2100,12 @@
                         <div class="video-container">
                             <iframe 
                                 id="vimeo-player"
-                                src="https://player.vimeo.com/video/1154677452?badge=0&autopause=0&player_id=vimeo-player&app_id=58479&muted=1"
+                                src="https://player.vimeo.com/video/1154677452?badge=0&autopause=0&player_id=vimeo-player&app_id=58479&muted=1&controls=0&title=0&byline=0&portrait=0&sidedock=0"
                                 frameborder="0" 
                                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                                 title="Présentation du webinaire Neoabita">
                             </iframe>
+                            <div class="video-overlay"></div>
                             <div class="video-controls">
                                 <button class="video-control-btn mute-btn" id="muteBtn" title="Activer le son">
                                     <svg id="muteIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
